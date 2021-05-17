@@ -16,13 +16,7 @@ function Footer() {
         </div>
 
         <div className="w-full md:w-1/3 flex items-center md:justify-center">
-          <a
-            href="https://commercejs.com"
-            title="Visit Commerce.js website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-1 text-faded-black hover:text-black transition-colors"
-          >
+          <a href="https://commercejs.com" title="Visit Commerce.js website" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1 text-faded-black hover:text-black transition-colors">
             <span>Powered by</span>
             <CommerceJsSVG className="h-4" />
           </a>
@@ -34,21 +28,11 @@ function Footer() {
               <a className="text-black">Shop</a>
             </Link>
             ,
-            <a
-              href="https://github.com/chec/commercejs-chopchop-demo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black"
-            >
+            <a href="https://github.com/chec/commercejs-chopchop-demo" target="_blank" rel="noopener noreferrer" className="text-black">
               About
             </a>
             ,
-            <a
-              href="https://twitter.com/commercejs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black"
-            >
+            <a href="https://twitter.com/commercejs" target="_blank" rel="noopener noreferrer" className="text-black">
               Contact
             </a>
             ,
@@ -60,9 +44,7 @@ function Footer() {
               <a className="text-black">Privacy</a>
             </Link>
             ,<span>&copy; 2021</span>
-            <p className="hidden md:block italic font-serif">
-              Fine tools for thoughtful cooks
-            </p>
+            <p className="hidden md:block italic font-heading">Fine tools for thoughtful cooks</p>
           </div>
         </div>
       </div>

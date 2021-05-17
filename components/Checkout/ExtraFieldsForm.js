@@ -27,16 +27,11 @@ function ExtraFieldsForm() {
     <div className="md:flex md:space-x-12 lg:space-x-24">
       <div className="md:w-1/2">
         <fieldset className="mb-3 md:mb-4">
-          <legend className="text-black font-medium text-lg md:text-xl py-3 block">
-            Booking
-          </legend>
+          <legend className="text-black font-medium text-lg md:text-xl py-3 block">Booking</legend>
 
           <FormInput name="bookingDate" type="date" />
 
-          <FormCheckbox
-            name="takeClassInBrooklyn"
-            label="Take the class at our space in Brooklyn"
-          />
+          <FormCheckbox name="takeClassInBrooklyn" label="Take the class at our space in Brooklyn" />
 
           <FormCheckbox name="takeClassOnline" label="Take the class online" />
         </fieldset>
@@ -44,27 +39,14 @@ function ExtraFieldsForm() {
 
       <div className="md:w-1/2">
         <fieldset className="mb-3 md:mb-4">
-          <legend className="text-black font-medium text-lg md:text-xl py-3 block">
-            Lesson Plan
-          </legend>
+          <legend className="text-black font-medium text-lg md:text-xl py-3 block">Lesson Plan</legend>
 
-          <p className="text-black text-sm italic font-serif font-medium mb-3">
-            Thanks for joining us for a lesson! Let us know what you might like
-            to learn or cook below.
-          </p>
+          <p className="text-black text-sm italic font-heading font-medium mb-3">Thanks for joining us for a lesson! Let us know what you might like to learn or cook below.</p>
 
           {extrafields.map(({ id }) => {
             const computedFieldName = `extrafields.${id}`;
 
-            return (
-              <FormTextarea
-                key={id}
-                id={computedFieldName}
-                name={computedFieldName}
-                placeholder="I'm interested in learning..."
-                rows={7}
-              />
-            );
+            return <FormTextarea key={id} id={computedFieldName} name={computedFieldName} placeholder="I'm interested in learning..." rows={7} />;
           })}
         </fieldset>
       </div>

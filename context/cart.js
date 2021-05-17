@@ -1,7 +1,7 @@
 import { createContext, useReducer, useEffect, useContext } from "react";
 import { useCycle } from "framer-motion";
 
-import { commerce } from "../lib/commerce";
+import { commerce } from "lib/commerce";
 
 const CartStateContext = createContext();
 const CartDispatchContext = createContext();
@@ -59,12 +59,8 @@ export const CartProvider = ({ children }) => {
   const reset = async () => dispatch({ type: RESET });
 
   return (
-    <CartDispatchContext.Provider
-      value={{ setCart, showCart, closeCart, reset }}
-    >
-      <CartStateContext.Provider value={{ open, ...state }}>
-        {children}
-      </CartStateContext.Provider>
+    <CartDispatchContext.Provider value={{ setCart, showCart, closeCart, reset }}>
+      <CartStateContext.Provider value={{ open, ...state }}>{children}</CartStateContext.Provider>
     </CartDispatchContext.Provider>
   );
 };

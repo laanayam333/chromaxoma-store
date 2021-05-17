@@ -1,5 +1,6 @@
 import "react-toastify/dist/ReactToastify.css";
-import "tailwindcss/tailwind.css";
+// // import "tailwindcss/tailwind.css";
+import "styles/index.css";
 
 import { AnimatePresence } from "framer-motion";
 import { Elements } from "@stripe/react-stripe-js";
@@ -7,17 +8,15 @@ import { loadStripe } from "@stripe/stripe-js";
 import { ToastContainer } from "react-toastify";
 import Head from "next/head";
 
-import { ThemeProvider } from "../context/theme";
-import { ModalProvider } from "../context/modal";
-import { CartProvider } from "../context/cart";
-import { CheckoutProvider } from "../context/checkout";
+import { ThemeProvider } from "context/theme";
+import { ModalProvider } from "context/modal";
+import { CartProvider } from "context/cart";
+import { CheckoutProvider } from "context/checkout";
 
-import Layout from "../components/Layout";
-import Modal from "../components/Modal";
+import Layout from "components/Navigation/Layout";
+import Modal from "components/Modal";
 
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 const toastOptions = {
   position: "bottom-center",
@@ -38,8 +37,7 @@ function MyApp({ Component, pageProps, router }) {
         options={{
           fonts: [
             {
-              cssSrc:
-                "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap",
+              cssSrc: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap",
             },
           ],
         }}
